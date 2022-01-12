@@ -1,0 +1,32 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.wrapper {
+}
+
+.header{
+    display: flex;
+}
+
+.header__left {
+
+}
+.header__logo {
+    font-size: 20px;
+    
+}
+.header__txt {
+}
+.header__nav {
+  .nav__list {
+    display: flex;
+    list-style: none;
+    .nav__list-item {
+      .nav__list-item-link {
+        text-decoration: none;
+      }
+    }
+  }
+}
