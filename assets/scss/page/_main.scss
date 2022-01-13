@@ -1,0 +1,38 @@
+.section__heading {
+    text-align: center;
+   
+    padding-top: 68px;
+    padding-bottom: 5px;
+    .heading-txt {
+        text-transform: uppercase;
+      font-size: 28px;
+      color: $primary-color;
+      font-weight: 700;
+    }
+  
+    .heading-line {
+      position: relative;
+      color: #c9cbcd;
+      &::before {
+        @include sexy-line();
+        left: calc(-90px - 15px);
+      }
+      &::after {
+        @include sexy-line();
+        right: calc(-90px - 15px);
+      }
+    }
+
+    .heading-description{
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 600;
+        // max-width: 930px;
+        
+    }
+  }
+
+  .space-after-line{
+      margin-top:54px;
+  }
+

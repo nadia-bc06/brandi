@@ -1,0 +1,16 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+@mixin sexy-line {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  border-top: solid 1px #c9cbcd;
+  width: 90px;
+}

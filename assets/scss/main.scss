@@ -1,6 +1,9 @@
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "base/typography";
 @import "page/header";
 @import "page/banner";
 @import "page/features";
 @import "page/works";
+@import "page/main";
 @import "page/team";
-@import "base/typography";
