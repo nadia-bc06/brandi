@@ -1,0 +1,235 @@
+.header {
+  background-color: black;
+  height: 70px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__left {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  font-size: 28px;
+}
+
+.header__txt {
+  font-size: 13px;
+  color: #556567;
+  margin-left: 50px;
+  position: relative;
+}
+
+.header__txt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -22px;
+  top: 0;
+  border-left: solid 1px #556567;
+  height: 17px;
+}
+
+.header__nav {
+  font-size: 13px;
+}
+
+.header__nav .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  height: 70px;
+  margin-bottom: 0;
+}
+
+.header__nav .nav__list .nav__list-item {
+  padding: 0 15px;
+  line-height: 70px;
+}
+
+.header__nav .nav__list .nav__list-item .nav__list-item-link {
+  color: white !important;
+}
+
+.header__nav .nav__list .nav__list-item .nav__list-item-link:hover {
+  text-decoration: none;
+}
+
+.banner {
+  height: 730px;
+  background-color: chocolate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.banner .banner__content {
+  padding-top: 390px;
+}
+
+.banner__heading1 {
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 0;
+}
+
+.banner__heading1 span {
+  font-weight: 700;
+}
+
+.banner__heading2 {
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 38px;
+  margin-top: 24px;
+  line-height: 50px;
+}
+
+.banner__heading2 span {
+  color: #0ed691;
+}
+
+.banner__text {
+  font-size: 18px;
+  line-height: 28px;
+  position: relative;
+  display: inline-block;
+}
+
+.banner__text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(-34px - 28px);
+  top: 14px;
+  border-top: solid 2px #0ed691;
+  width: 28px;
+}
+
+.banner__text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: calc(-34px - 28px);
+  top: 14px;
+  border-top: solid 2px #0ed691;
+  width: 28px;
+}
+
+.banner__social {
+  margin-top: 110px;
+}
+
+.banner__social .banner__social-icon {
+  width: 20px;
+  height: 20px;
+  color: #57716a;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.banner__social .banner__social-icon:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.section__heading {
+  text-align: center;
+}
+
+.section__heading .heading-txt {
+  font-size: 28px;
+  color: #0eb493;
+  font-weight: 700;
+}
+
+.section__heading .heading-line {
+  position: relative;
+  color: #c9cbcd;
+}
+
+.section__heading .heading-line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(-90px - 15px);
+  top: 10px;
+  border-top: solid 2px #c9cbcd;
+  width: 90px;
+}
+
+.section__heading .heading-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: calc(-90px - 15px);
+  top: 10px;
+  border-top: solid 2px #c9cbcd;
+  width: 90px;
+}
+
+.features__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__item .features__item-logo {
+  text-align: center;
+}
+
+.features__item-logo i {
+  --logo-size: 40px;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  line-height: var(--logo-size);
+  border: solid 1px #0eb493;
+  color: #0eb493;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.features__item-title {
+  font-size: 20px;
+  color: #062033;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.features__item-desc {
+  font-size: 13px;
+  text-align: justify;
+  color: #4d606e;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+/*# sourceMappingURL=main.css.map */
