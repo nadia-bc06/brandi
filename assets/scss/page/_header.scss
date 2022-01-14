@@ -1,48 +1,49 @@
+/* header */
 .header {
   background-color: black;
-  height: 70px;
+  height: $header-height;
   color: white;
   display: flex;
   justify-content: center;
 }
 
-
 .header__left {
-  height: 70px;
+  height: $header-height;
   display: flex;
   align-items: center;
-}
-.header__logo {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-size: 28px;
-}
-.header__txt {
-  font-size: 13px;
-  color: #556567;
-  margin-left: 54px;
-  position: relative;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -22px;
-    top: 2px;
-    border-left: solid 1px #556567;
-    height: 18px;
+  .header__logo {
+    @include font-size(28px);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+  }
+  .header__txt {
+    @include font-size(13px);
+    color: $dark-color;
+    margin-left: 54px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -22px;
+      top: 2px;
+      border-left: solid 1px $dark-color;
+      height: 18px;
+    }
   }
 }
+
 .header__nav {
-  font-size: 13px;
+  @include font-size(13px);
 
   .nav__list {
     display: flex;
     justify-content: flex-end;
     list-style: none;
-    height: 70px;
+    height: $header-height;
     margin-bottom: 0;
     .nav__list-item {
-      // padding: 0 15px;
       margin-left: 30px;
       line-height: 70px;
       &::before {
@@ -57,14 +58,6 @@
           text-decoration: none;
         }
       }
-      // .nav__list-item-link.active{
-      //   .nav__list-item::before {
-      //       content: "";
-      //       display: block;
-      //       border-top: solid 2px $nav-list-line;
-      //     }
-      // }
     }
   }
 }
-

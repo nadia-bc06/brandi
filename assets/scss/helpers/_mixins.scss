@@ -14,3 +14,28 @@
   border-top: solid 1px #c9cbcd;
   width: 90px;
 }
+
+@mixin center-adjust($justify: center , $align: center ){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin round-icon($dk ,  $border-width , $border-color , $border-radius : 50% ){
+    width: $dk ;
+    height: $dk;
+    line-height: $dk;
+    border-radius: $border-radius;
+    align-items: center;
+    border: solid $border-width $border-color;
+}
+
+
+
+@mixin overlay( $bg-color){
+  position: absolute;
+  inset: 0;
+  background-color: $bg-color;
+  opacity: 0;
+  transition: all ease 0.3s;
+}
