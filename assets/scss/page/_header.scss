@@ -23,9 +23,7 @@
     position: relative;
 
     &::before {
-      content: "";
-      display: block;
-      position: absolute;
+      @include b4after();
       left: -22px;
       top: 2px;
       border-left: solid 1px $dark-color;
@@ -36,22 +34,32 @@
 
 .header__nav {
   @include font-size(13px);
-
   .nav__list {
     display: flex;
     justify-content: flex-end;
     list-style: none;
     height: $header-height;
     margin-bottom: 0;
+
     .nav__list-item {
       margin-left: 30px;
       line-height: 70px;
-      &::before {
-        content: "";
-        display: block;
-        border-top: solid 2px $nav-list-line;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        &::after {
+          left: 0;
+        }
       }
-
+      &::after {
+        content: "";
+        position: absolute;
+        border-top: solid 2px $nav-list-line;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        transition: 0.3s ease-in-out;
+      }
       .nav__list-item-link {
         color: white !important;
         &:hover {

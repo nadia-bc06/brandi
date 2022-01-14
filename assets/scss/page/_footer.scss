@@ -1,0 +1,92 @@
+.footer{
+    @include center-adjust(center, unset);
+    @include font-size(13px);
+    color:$white-txt-color;
+    background-color: $footer-bg-color;
+    height: $footer-height;
+    .footer__logo{
+        @include font-size(28px);
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        margin-top: 90px;
+        margin-bottom: 34px;
+    }
+    
+    .footer__column-title{
+        @include font-size(14px);
+        margin: 110px 0 42px;
+        font-weight: 600;
+    }
+    .footer__input{
+        input{
+            color:white;
+            padding-right: 0;
+            border: solid 2px #fff;
+            border-right:none;
+            background-color: $footer-bg-color;
+            border-radius: 2px;
+            height: 46px;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        .footer__input-btn{
+            border: solid 2px #fff;
+            border-left:none;
+            border-radius: 2px;
+           .btn{
+                &:hover i    {
+                   color: $white-txt-color;
+                }
+                &:focus{
+                box-shadow: none;
+           }
+        }
+            i{
+                color: #5abeab;
+                @include font-size(20px);
+               
+            }
+        }
+
+    }
+  
+}
+.footer__txt{
+    line-height: 1.8;
+}
+
+.footer__subscribe{
+    .footer__txt{
+        margin-top:20px
+    }
+}
+
+.footer__explore{
+    .footer__txt{
+        margin-top: -6px;
+        margin-bottom:18px;
+        &:hover{
+            cursor: pointer;
+            color: $txt-hover-pink-color;
+        }
+    }
+
+
+}
+
+.footer__rights{
+    margin-top: 165px;
+    i{
+        color: #157562;
+        margin: 0 5px;
+        
+    }
+    .footer__brand-name{
+        color: $black-txt-color;
+        text-decoration: none;
+        &:hover{
+            color: $txt-hover-pink-color;
+        }
+    }
+}

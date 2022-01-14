@@ -31,9 +31,12 @@
     margin-top: 20px;
     margin-bottom: 0;
   }
+  
+  &-text {
+    margin-left: -15px;
+    margin-right: -15px;
+    
+  }
 }
 
-.features__item-text {
-  margin-left: -15px;
-  margin-right: -15px;
-}
+
