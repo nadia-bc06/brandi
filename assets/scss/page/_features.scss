@@ -1,14 +1,11 @@
-
-
 .features {
-  display: flex;
-  justify-content: center;
-  height: 460px;
-  background-color: #f4f7f9;
+  @include center-adjust(center,unset);
+  height: $feature-height;
+  background-color: $feature-bg-color;
 }
-.features__content{
+.features__content {
   margin-left: -15px;
-    padding-right: 15px;
+  padding-right: 15px;
 }
 .features__item {
   display: flex;
@@ -16,34 +13,27 @@
     text-align: center;
     margin-right: -15px;
     i {
-      font-size: 16px;
-      $logo_size: 40px;
-      width: $logo_size;
-      height: $logo_size;
-      line-height: $logo_size;
-      border: solid 1px #0eb493;
+      @include round-icon(40px, 1px, $primary-color);
+      @include font-size(16px);
       color: #0eb493;
-      text-align: center;
-      border-radius: 50%;
     }
   }
   &-title {
-    font-size: 20px;
-    color: #062033;
+    @include font-size(20px);
+    color: $dark-txt-color;
     font-weight: 600;
     margin-bottom: 0;
   }
 
   &-desc {
-    font-size: 13px;
-    text-align: justify;
-    color: #4d606e;
+    @include font-size(13px);
+    color: $grey-txt-color;
     margin-top: 20px;
     margin-bottom: 0;
   }
 }
 
-.features__item-text{
+.features__item-text {
   margin-left: -15px;
   margin-right: -15px;
 }

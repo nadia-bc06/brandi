@@ -1,14 +1,12 @@
-.works__category {
-}
+/* works */
 .works__category-list {
-  display: flex;
-  justify-content: center;
+  @include center-adjust(center, unset);
   list-style: none;
   margin-top: 40px;
   margin-bottom: 36px;
 }
 .works__category-list-item {
-  font-size: 14px;
+  @include font-size(14px);
   font-weight: 700;
   margin: 0 5px;
   padding: 4px 20px;
@@ -29,52 +27,37 @@
   margin-left: -15px;
   margin-right: -15px;
 
-  &:hover{
+  &:hover {
     .works__photo-item-overlay {
-        opacity: 1;
-        cursor: pointer;
-        transition: all ease 0.3s;
+      opacity: 1;
+      cursor: pointer;
+      transition: all ease 0.3s;
     }
   }
   .works__photo-item-overlay {
-    position: absolute;
+    @include overlay($primary-color);
+    @include center-adjust();
     text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $primary-color;
-    opacity: 0;
-    .overlay-content {
-      color: #fff;
 
-      .overlay-icon i{
-        font-size: 16px;
-        $logo_size: 40px;
-        width: $logo_size;
-        height: $logo_size;
-        line-height: $logo_size;
-        border: solid 1px #fff;
-        text-align: center;
-        border-radius: 50%;
+    .overlay-content {
+      color: $white-txt-color;
+
+      .overlay-icon i {
+        @include round-icon(40px, 1px, #fff);
+        @include font-size(16px);
       }
       .overlay-title {
-          font-size: 18px;
-          margin-top: 24px;
-            margin-bottom: 6px;
-          
+        @include font-size(18px);
+        margin-top: 24px;
+        margin-bottom: 6px;
       }
       .overlay-txt {
-          font-size: 14px;
+        @include font-size(14px);
       }
     }
   }
   img {
     width: 100%;
     height: 100%;
-    
   }
 }

@@ -1,4 +1,83 @@
-.team{
-    display: flex;
-    justify-content: center;
+/* team */
+.team {
+  @include center-adjust();
+}
+
+.team-carousel {
+  margin-top: 94px;
+}
+
+.carousel-inner {
+  margin-bottom: 186px;
+}
+.team__indicators {
+  bottom: -94px;
+}
+.team__indicators li {
+  @include round-icon(8px, 1px, #d0d5d8);
+  background-color: #fff;
+  opacity: 1;
+}
+
+.team__indicators li.active {
+  background-color: black;
+  border: solid 1px black;
+}
+
+.team__item-img-box {
+  position: relative;
+}
+
+.team__item-wrapper:hover .team__item-overlay {
+  opacity: 1;
+}
+.team__item-wrapper:hover .member-name {
+  color: $primary-color;
+}
+.team__item-overlay {
+  @include overlay($primary-color);
+  @include center-adjust();
+  color: $white-txt-color;
+  padding: 22px;
+
+  .overlay-content {
+    text-align: center;
+    .overlay-heading {
+      @include font-size(16px);
+      font-weight: 700;
+    }
+    .overlay-description {
+      @include font-size(16px);
+      font-weight: 500;
+    }
+    .overlay-icons {
+      margin-top: 70px;
+      i {
+        @include round-icon(40px, unset , unset , unset);
+        font-size: 20px;
+        background-color: $icon-bg-color;
+        transition: all ease 0.3s;
+
+        &:hover {
+          background-color: lighten($icon-bg-color, $amount: 30%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.team__item-img-txt {
+  text-align: center;
+  .member-name {
+    @include font-size(18px);
+
+    font-weight: 700;
+    color: $dark-txt-color;
+    margin: 16px 0 8px;
+  }
+  .member-title {
+    @include font-size(13px);
+    color: $grey-txt-color;
+  }
 }
