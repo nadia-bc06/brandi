@@ -1,31 +1,29 @@
 /* team */
 .team {
-  @include center-adjust();
-}
-
-.team-carousel {
-  margin-top: 94px;
-}
-
-.carousel-inner {
-  margin-bottom: 186px;
-}
-.team__indicators {
-  bottom: -94px;
-}
-.team__indicators li {
-  @include round-icon(8px, 1px, #d0d5d8);
-  background-color: #fff;
-  opacity: 1;
-}
-
-.team__indicators li.active {
-  background-color: black;
-  border: solid 1px black;
+  @include center-adjust;
+  .team-carousel {
+    margin-top: 94px;
+    .team__indicators {
+      bottom: -94px;
+      li {
+        @include round-icon(8px, 1px, #d0d5d8);
+        background-color: #fff;
+        opacity: 1;
+        &.active {
+          background-color: black;
+          border: solid 1px black;
+        }
+      }
+    }
+    .carousel-inner {
+      margin-bottom: 186px;
+    }
+  }
 }
 
 .team__item-img-box {
   position: relative;
+  
 }
 
 .team__item-wrapper:hover .team__item-overlay {
@@ -36,7 +34,7 @@
 }
 .team__item-overlay {
   @include overlay($primary-color);
-  @include center-adjust();
+  @include center-adjust;
   color: $white-txt-color;
   padding: 22px;
 
@@ -53,7 +51,7 @@
     .overlay-icons {
       margin-top: 70px;
       i {
-        @include round-icon(40px, unset , unset , unset);
+        @include round-icon(40px, unset, unset, unset);
         font-size: 20px;
         background-color: $icon-bg-color;
         transition: all ease 0.3s;

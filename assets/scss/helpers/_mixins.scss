@@ -30,12 +30,16 @@
     border: solid $border-width $border-color;
 }
 
-
-
 @mixin overlay( $bg-color){
   position: absolute;
   inset: 0;
   background-color: $bg-color;
   opacity: 0;
   transition: all ease 0.3s;
+}
+
+@mixin b4after(){
+  content: "";
+  display: block;
+  position: absolute;
 }
